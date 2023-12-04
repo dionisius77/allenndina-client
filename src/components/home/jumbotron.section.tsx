@@ -25,7 +25,7 @@ const JumbotronSection = () => {
         <div className=''>
           <Image
             className=''
-            src='/images/hotpot.png'
+            src='/images/A.png'
             width={500}
             height={358}
             alt='edu'

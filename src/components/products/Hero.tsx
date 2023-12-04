@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { sectionProps } from '@/interfaces/features.interface';
-
-const Hero = ({ sectionStyle }: sectionProps) => {
+const Hero = ({ sectionStyle }: { sectionStyle: string }) => {
   return (
     <section className={`${sectionStyle}`}>
       <div className='flex flex-col items-center justify-center '>
