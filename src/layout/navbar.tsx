@@ -14,7 +14,7 @@ import { navigationLinks } from '@/constant/data';
 import allenndina from '~/images/allendina.png';
 
 const Navbar = () => {
-  const router = useRouter();
+  const route = useRouter();
   const menuRef = useRef<any>(null);
   const [showMenu, setShowMenu] = useState(false);
   const pathname = usePathname();
@@ -57,11 +57,8 @@ const Navbar = () => {
           <ul className='hidden space-x-[30px] lg:flex'>
             {navigationLinks.map((nav, i) => (
               <li key={i} className=''>
-                <Button
-                  onClick={() => {
-                    router.push(nav.hash);
-                    setShowMenu(false);
-                  }}
+                <Link
+                  href={nav.hash}
                   className={`before:origin-[100%, 50%] before:scale-z-[1] hover:before:origin-[100%, 0%] hover:before:scale-z-[1] text-primary-800 before:bg-primary-800 relative pb-2 text-[14px] font-semibold uppercase tracking-[2px] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:scale-y-[1] before:transition-all before:duration-300 before:ease-in-out before:will-change-transform before:content-[''] hover:before:scale-x-[1] hover:before:scale-y-[1] ${
                     newPathname === nav.hash
                       ? 'border-primary-800 before:scale-x-[1]'
@@ -69,7 +66,7 @@ const Navbar = () => {
                   }`}
                 >
                   {nav.name}
-                </Button>
+                </Link>
               </li>
             ))}
           </ul>
@@ -105,8 +102,11 @@ const Navbar = () => {
           <ul className='flex flex-col gap-2'>
             {navigationLinks.map((nav, i) => (
               <li key={i} className=''>
-                <Link
-                  href={nav.hash}
+                <button
+                  onClick={() => {
+                    setShowMenu(false);
+                    route.push(nav.hash);
+                  }}
                   className={`before:origin-[100%, 50%] before:scale-z-[1] hover:before:origin-[100%, 0%] hover:before:scale-z-[1] text-primary-800 before:bg-primary-800 relative flex items-center justify-center pb-2 text-center text-[14px] font-semibold uppercase tracking-[2px] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:scale-y-[1] before:transition-all before:duration-300 before:ease-in-out before:will-change-transform before:content-[''] hover:before:scale-x-[1] hover:before:scale-y-[1] ${
                     newPathname === nav.hash
                       ? 'border-primary-800 before:scale-x-[1]'
@@ -114,7 +114,7 @@ const Navbar = () => {
                   }`}
                 >
                   {nav.name}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
