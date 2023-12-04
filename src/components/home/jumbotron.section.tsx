@@ -3,7 +3,7 @@ import Image from 'next/image';
 const JumbotronSection = () => {
   return (
     <section className='mb-[100px] pt-[125px]'>
-      <div className='flex flex-col-reverse px-[20px] md:flex-row md:items-center md:justify-center md:gap-[190px]'>
+      <div className='flex flex-col-reverse gap-10 px-[20px] md:container md:mx-auto md:flex-row md:items-center md:justify-between'>
         <div className='flex flex-col items-center justify-center md:max-w-[520px] md:items-start md:pt-24'>
           <h2 className='text-xl font-bold md:text-3xl'>Allendinna</h2>
           <p className='mb-[12px] mt-[12px] text-center text-sm md:text-start md:text-base'>
@@ -22,7 +22,7 @@ const JumbotronSection = () => {
             Contact Us
           </a>
         </div>
-        <div className='mt-10'>
+        <div className=''>
           <Image
             className=''
             src='/images/hotpot.png'
