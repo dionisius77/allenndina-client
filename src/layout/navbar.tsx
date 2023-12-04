@@ -9,7 +9,7 @@ import Button from '@/components/buttons/Button';
 
 import { navigationLinks } from '@/constant/data';
 
-import quadra from '~/images/quadra-blue.png';
+import allenndina from '~/images/allendina.png';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className='container mx-auto flex flex-row items-center justify-between px-4'>
         <div className='text-3xl font-bold text-white'>
           <Image
-            src={quadra}
+            src={allenndina}
             alt=''
             width={50}
             height={50}
