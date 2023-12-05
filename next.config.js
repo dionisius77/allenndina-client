@@ -9,7 +9,7 @@ const nextConfig = {
 
   // Uncoment to add domain whitelist
   images: {
-    domains: ['source.unsplash.com'],
+    domains: ['source.unsplash.com', 'firebasestorage.googleapis.com'],
   },
 
   webpack(config, { isServer }) {
