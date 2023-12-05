@@ -33,4 +33,6 @@ const getProducts = async () => {
   return productsData;
 };
 
+export const dynamic = 'force-dynamic';
+
 export default page;
