@@ -10,9 +10,7 @@ const page = async ({ params }: { params: { id: string } }) => {
   const product = await getProduct(params.id);
   return (
     <main className='w-full bg-[#f3f5f8] pb-4 pt-[150px]'>
-      <h1 className='font-poppins mb-[50px] text-center'>
-        Arabica Gunung Halu
-      </h1>
+      <h1 className='font-poppins mb-[50px] text-center'>{product.title}</h1>
       <div className='container mx-auto grid gap-5 md:grid-cols-4'>
         <div className='order-2 flex w-full flex-col gap-2 rounded-md bg-white p-4 md:order-1'>
           <div>
